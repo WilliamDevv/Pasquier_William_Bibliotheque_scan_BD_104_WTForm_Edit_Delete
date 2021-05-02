@@ -1,0 +1,9 @@
+{{ form.dateDeNaissance_personne_wtf.label }}<br>
+						{{ form.dateDeNaissance_personne_wtf(size=32) }}<br>
+						{% for error in form.dateDeNaissance_personne_wtf.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+						{% endfor %}
+
+{% for error in form.dateDeNaissance_personne_wtf.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+						{% endfor %}
