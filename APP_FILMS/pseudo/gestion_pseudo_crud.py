@@ -314,7 +314,7 @@ def pseudo_delete_wtf():
             print(id_pseudo_delete, type(id_pseudo_delete))
 
             # Requête qui affiche tous les films qui ont le genre que l'utilisateur veut effacer
-            str_sql_avoir_pseudo_delete = """SELECT id_avoir_pseudo, pseudo, id_personne, pers_nom FROM t_avoir_pseudo 
+            str_sql_avoir_pseudo_delete = """SELECT id_avoir_pseudo, pseudo, id_personne, pers_nom, pers_prenom, pers_dateDeNaissance FROM t_avoir_pseudo 
                                             INNER JOIN t_pseudo ON t_avoir_pseudo.fk_pseudo = t_pseudo.id_pseudo
                                             INNER JOIN t_personne ON t_avoir_pseudo.fk_personne = t_personne.id_personne
                                             WHERE fk_pseudo = %(value_id_pseudo)s"""
